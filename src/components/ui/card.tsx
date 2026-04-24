@@ -10,7 +10,7 @@ export function Card({ className, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-card border border-neutral-200 bg-neutral-0 shadow-sm",
+        "rounded-card border border-border-default bg-surface shadow-[var(--cd-elevation-card)]",
         className,
       )}
       {...props}

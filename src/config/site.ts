@@ -8,4 +8,13 @@ export const siteConfig = {
   shortTitle: "Company Details",
   /** Sticky offset = Figma Navigation frame height (330:6333), px */
   headerOffsetPx: 131,
+  navLabels: [
+    "About Us",
+    "Compare",
+    "ShipAdvisor AI",
+    "Full Service",
+    "Companies",
+    "Stories",
+    "Resources",
+  ] as const,
 } as const;

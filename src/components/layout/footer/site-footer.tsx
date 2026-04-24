@@ -260,11 +260,11 @@ export function SiteFooter() {
           )}
         >
           <p>
-            Disclaimer: Transportvibe is an independent review platform. We are not affiliated
-            with any car shipping companies. Our ratings are based on publicly available data
-            including FMCSA records, Trustpilot reviews, BBB ratings, and customer feedback. Always
-            verify current pricing and availability directly with the shipping company before making
-            a decision. Precision analytics are provided as guidance and do not constitute a legal
+            Disclaimer: Transportvibe is an independent review platform. We are not affiliated with
+            any car shipping companies. Our ratings are based on publicly available data including
+            FMCSA records, Trustpilot reviews, BBB ratings, and customer feedback. Always verify
+            current pricing and availability directly with the shipping company before making a
+            decision. Precision analytics are provided as guidance and do not constitute a legal
             guarantee of performance.
           </p>
         </div>

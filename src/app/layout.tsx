@@ -30,10 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${rethinkSans.variable} ${openSans.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${rethinkSans.variable} ${openSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans text-body-md text-text-black">
         <MarketingChrome>
           <div className="flex flex-1 flex-col">{children}</div>

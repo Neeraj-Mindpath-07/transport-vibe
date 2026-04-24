@@ -1,0 +1,421 @@
+{
+  "company": {
+    "name": "Mercury Auto Transport",
+    "tagline": "Reliable door-to-door shipping backed by verified reviews.",
+    "location": "Chicago, IL"
+  },
+  "banner": {
+    "title": "Mercury Auto Transport",
+    "subtitle": "Compare verified ratings, delivery reliability, and real customer experiences before booking.",
+    "badges": ["FMCSA Checked", "BBB A+", "Licensed Broker"],
+    "stats": [
+      { "label": "Customer Reviews", "value": "15K+" },
+      { "label": "Avg. Rating", "value": "4.5" },
+      { "label": "FMCSA Checked", "value": "100%" },
+      { "label": "Verified Companies", "value": "50+" }
+    ]
+  },
+  "score": {
+    "title": "Trust Score Breakdown",
+    "overall": 92,
+    "maximum": 100,
+    "summary": "Strong on quote accuracy, dispatch speed, and claim handling transparency.",
+    "methodologyHref": "#",
+    "pillars": [
+      {
+        "id": "pricing",
+        "title": "Pricing Accuracy",
+        "strength": "strong",
+        "score": 94,
+        "summary": "Price-sensitive major corridors",
+        "detail": "93% quote accuracy with dense carrier availability on CA, FL, TX, and NY lanes."
+      },
+      {
+        "id": "dispatch",
+        "title": "Dispatch Speed",
+        "strength": "strong",
+        "score": 91,
+        "summary": "Fast assignment in metro markets",
+        "detail": "Most dispatches lock in within 24-48 hours when lead time is above one week."
+      },
+      {
+        "id": "vehicle-care",
+        "title": "Vehicle Care",
+        "strength": "good",
+        "score": 78,
+        "summary": "Better with enclosed specialists",
+        "detail": "Condition score remains high, but enclosed luxury transport is stronger with niche carriers."
+      },
+      {
+        "id": "rural-pickup",
+        "title": "Rural Pickup",
+        "strength": "weaker",
+        "score": 58,
+        "summary": "Limited off-corridor network depth",
+        "detail": "Remote pickups can increase cost and add schedule variance when highways are far."
+      },
+      {
+        "id": "updates",
+        "title": "Transit Updates",
+        "strength": "weaker",
+        "score": 60,
+        "summary": "Communication can lag mid-route",
+        "detail": "A subset of reviews cites update delays during long-haul transit windows."
+      }
+    ]
+  },
+  "companyInformation": {
+    "title": "Company Information",
+    "about": [
+      "Mercury Auto Transport is a licensed broker with nationwide open and enclosed options.",
+      "The company is generally strongest on major interstate corridors with 7-14 day booking windows."
+    ],
+    "quickFacts": [
+      { "label": "Status", "value": "Active · Authorized" },
+      { "label": "MC Number", "value": "MC-776701" },
+      { "label": "HQ", "value": "Chicago, IL" },
+      { "label": "Founded", "value": "2006 · 18 yrs" },
+      { "label": "Coverage", "value": "All 48 states" },
+      { "label": "Response time", "value": "< 3 hours avg" },
+      { "label": "BBB", "value": "A+ Accredited" },
+      { "label": "Lead time", "value": "10+ days rec." }
+    ]
+  },
+  "comparison": {
+    "title": "Compare With Others",
+    "ctaLabel": "View Full Comparison",
+    "items": [
+      {
+        "id": "sherpa",
+        "name": "Sherpa Auto Transport",
+        "trustScore": 90,
+        "summary": "Excellent enclosed transport consistency with higher average quote ceilings."
+      },
+      {
+        "id": "amerfreight",
+        "name": "AmeriFreight",
+        "trustScore": 88,
+        "summary": "Strong discount programs and military shipping options."
+      },
+      {
+        "id": "uship",
+        "name": "uShip",
+        "trustScore": 84,
+        "summary": "Marketplace flexibility with wider carrier variance by route."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Customer Reviews",
+    "description": "Photo-backed deliveries and shipment snapshots from verified customers.",
+    "images": [
+      {
+        "id": "img-1",
+        "src": "https://www.figma.com/api/mcp/asset/88c04655-8d69-411e-b438-910cdc74df2a",
+        "alt": "Vehicle loading scene",
+        "width": 1302,
+        "height": 350,
+        "tags": ["open transport", "sedan"]
+      },
+      {
+        "id": "img-2",
+        "src": "https://www.figma.com/api/mcp/asset/cb32dead-6777-4ec1-b8b5-fcab679a85ac",
+        "alt": "Transportvibe delivery badge",
+        "width": 146,
+        "height": 32,
+        "tags": ["verification", "branding"]
+      },
+      {
+        "id": "img-3",
+        "src": "https://www.figma.com/api/mcp/asset/68f817f1-3cab-4f50-8b92-58a106c80319",
+        "alt": "Transport logo block",
+        "width": 194,
+        "height": 42,
+        "tags": ["branding", "pickup"]
+      },
+      {
+        "id": "img-4",
+        "src": "https://www.figma.com/api/mcp/asset/ae813ac6-2035-4cd1-9090-bb0eb142e5fa",
+        "alt": "Payment confirmation snapshot",
+        "width": 55,
+        "height": 22,
+        "tags": ["payment", "verification"]
+      },
+      {
+        "id": "img-5",
+        "src": "https://www.figma.com/api/mcp/asset/9e117b07-bdbb-448b-94c9-d5f6c6ff4b6e",
+        "alt": "Invoice and settlement screenshot",
+        "width": 60,
+        "height": 38,
+        "tags": ["payment", "documentation"]
+      },
+      {
+        "id": "img-6",
+        "src": "https://www.figma.com/api/mcp/asset/7709180a-dcba-4ce9-b040-79b0d605c12a",
+        "alt": "Card settlement icon",
+        "width": 60,
+        "height": 46,
+        "tags": ["payment", "closed transport"]
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Reviews",
+    "description": "Filter by service type, state, and score to evaluate fit for your route.",
+    "pageSize": 4,
+    "filterOptions": {
+      "serviceTypes": ["Open Transport", "Enclosed Transport", "Expedited"],
+      "states": ["CA", "FL", "TX", "NY", "IL"],
+      "ratings": [5, 4, 3]
+    },
+    "items": [
+      {
+        "id": "rev-1",
+        "reviewer": "Nina Patel",
+        "rating": 5,
+        "date": "2026-02-14",
+        "serviceType": "Open Transport",
+        "state": "CA",
+        "vehicle": "2023 Tesla Model Y",
+        "verified": true,
+        "headline": "Delivered on time with clear updates",
+        "body": "Pickup happened within a day of the quoted window and the driver shared status updates at each state line."
+      },
+      {
+        "id": "rev-2",
+        "reviewer": "Jonathan Brooks",
+        "rating": 4,
+        "date": "2026-02-08",
+        "serviceType": "Enclosed Transport",
+        "state": "FL",
+        "vehicle": "2021 Porsche 911",
+        "verified": true,
+        "headline": "Great care for enclosed shipment",
+        "body": "No condition issues at delivery. Communication was strong before pickup and at final handoff."
+      },
+      {
+        "id": "rev-3",
+        "reviewer": "Ariella Chen",
+        "rating": 5,
+        "date": "2026-01-29",
+        "serviceType": "Expedited",
+        "state": "TX",
+        "vehicle": "2020 Ford F-150",
+        "verified": true,
+        "headline": "Expedited move worked exactly as promised",
+        "body": "Needed a fast relocation and dispatch arranged pickup in under 24 hours. Pricing stayed within quote."
+      },
+      {
+        "id": "rev-4",
+        "reviewer": "Michael Reed",
+        "rating": 4,
+        "date": "2026-01-15",
+        "serviceType": "Open Transport",
+        "state": "NY",
+        "vehicle": "2018 Honda Accord",
+        "verified": true,
+        "headline": "Solid value for cross-country shipping",
+        "body": "Car arrived clean and the final cost matched the estimate. One update lag during transit, otherwise smooth."
+      },
+      {
+        "id": "rev-5",
+        "reviewer": "Sofia Martinez",
+        "rating": 5,
+        "date": "2025-12-20",
+        "serviceType": "Open Transport",
+        "state": "IL",
+        "vehicle": "2022 Toyota RAV4",
+        "verified": true,
+        "headline": "Professional broker and transparent process",
+        "body": "Everything from confirmation to delivery was documented clearly and handled quickly."
+      },
+      {
+        "id": "rev-6",
+        "reviewer": "Daniel Kim",
+        "rating": 3,
+        "date": "2025-12-10",
+        "serviceType": "Enclosed Transport",
+        "state": "CA",
+        "vehicle": "2019 BMW M4",
+        "verified": true,
+        "headline": "Good carrier quality but delayed updates",
+        "body": "Vehicle arrived safely, but I had to request two status updates manually during the route."
+      },
+      {
+        "id": "rev-7",
+        "reviewer": "Grace Hoffman",
+        "rating": 4,
+        "date": "2025-11-28",
+        "serviceType": "Expedited",
+        "state": "TX",
+        "vehicle": "2024 Kia Telluride",
+        "verified": true,
+        "headline": "Fast pickup and accurate quote",
+        "body": "Rush shipment from Dallas to Miami completed earlier than expected with no damage concerns."
+      },
+      {
+        "id": "rev-8",
+        "reviewer": "Ethan Rivera",
+        "rating": 5,
+        "date": "2025-11-15",
+        "serviceType": "Open Transport",
+        "state": "FL",
+        "vehicle": "2017 Subaru Outback",
+        "verified": true,
+        "headline": "Easy booking and smooth delivery",
+        "body": "The coordinator was responsive and made it easy to compare options before I confirmed."
+      }
+    ]
+  },
+  "paymentStrip": {
+    "title": "Accepted Payment Methods",
+    "description": "Use secure payment options when confirming your booking.",
+    "methods": [
+      {
+        "name": "Visa",
+        "src": "https://www.figma.com/api/mcp/asset/ae813ac6-2035-4cd1-9090-bb0eb142e5fa",
+        "width": 55,
+        "height": 22
+      },
+      {
+        "name": "American Express",
+        "src": "https://www.figma.com/api/mcp/asset/9e117b07-bdbb-448b-94c9-d5f6c6ff4b6e",
+        "width": 60,
+        "height": 38
+      },
+      {
+        "name": "Apple Pay",
+        "src": "https://www.figma.com/api/mcp/asset/b7ea23af-8d73-4f3d-9850-cb3d28e62ddd",
+        "width": 60,
+        "height": 25
+      },
+      {
+        "name": "PayPal",
+        "src": "https://www.figma.com/api/mcp/asset/0eee8853-5354-430a-97c5-ab42feb74abc",
+        "width": 73,
+        "height": 19
+      },
+      {
+        "name": "Venmo",
+        "src": "https://www.figma.com/api/mcp/asset/7bead68b-75c8-4391-b9b0-16e9cb4c9724",
+        "width": 60,
+        "height": 14
+      },
+      {
+        "name": "Discover",
+        "src": "https://www.figma.com/api/mcp/asset/de35fc01-fb16-424f-9de2-9021de50ccf4",
+        "width": 60,
+        "height": 10
+      },
+      {
+        "name": "Mastercard",
+        "src": "https://www.figma.com/api/mcp/asset/7709180a-dcba-4ce9-b040-79b0d605c12a",
+        "width": 60,
+        "height": 46
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Get Exclusive Deals And Shipping Tips",
+    "description": "Subscribe to get market pricing updates and smarter booking recommendations.",
+    "ctaLabel": "Subscribe",
+    "footnote": "No spam, unsubscribe anytime."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "text": "Transportvibe is an independent review platform and is not affiliated with specific shipping carriers. Ratings are generated from publicly available records and user-reported experiences. Always validate current pricing, insurance coverage, and availability directly with the provider before booking."
+  },
+  "sidebar": {
+    "cta": {
+      "logo": {
+        "src": "/company-sidebar-logo.png",
+        "alt": "Mercury Auto Transport — Rimberio Trucking Cargo mark",
+        "width": 200,
+        "height": 200
+      },
+      "companyName": "Mercury Auto Transport",
+      "rating": 4.8,
+      "reviewCount": 2100,
+      "trustScore": 96,
+      "trustBadgeLabel": "Highly Trusted",
+      "getQuoteLabel": "GET QUOTE FROM MERCURY",
+      "compareWithOtherLabel": "COMPARE WITH OTHER",
+      "addToAdvisorSessionLabel": "ADD TO ADVISOR SESSION",
+      "useFullServiceLabel": "USE FULL SERVICE",
+      "fullServiceDescription": "Transportvibe handles the shipment end-to-end.",
+      "learnMoreLabel": "Learn more",
+      "learnMoreHref": "#"
+    },
+    "quickFactsTitle": "Quick Facts",
+    "quickFacts": [
+      { "label": "Status", "value": "Active · Authorized", "valueTone": "primary" },
+      {
+        "label": "MC Number",
+        "value": "MC-776701",
+        "valueTone": "primary",
+        "valueHref": "https://safer.fmcsa.dot.gov/"
+      },
+      { "label": "HQ", "value": "Chicago, IL" },
+      { "label": "Founded", "value": "2006 · 18 yrs" },
+      { "label": "Coverage", "value": "All 48 states" },
+      { "label": "Response time", "value": "< 3 hours avg" },
+      { "label": "BBB", "value": "A+ Accredited", "valueTone": "primary" },
+      { "label": "Lead time", "value": "10+ days rec." }
+    ],
+    "compareTitle": "Compare with others",
+    "compareRows": [
+      {
+        "id": "sherpa",
+        "name": "Sherpa Auto Transport",
+        "logo": {
+          "src": "/company-sidebar-logo.png",
+          "alt": "Sherpa Auto Transport",
+          "width": 200,
+          "height": 200
+        }
+      },
+      {
+        "id": "amerfreight",
+        "name": "AmeriFreight",
+        "logo": {
+          "src": "/company-sidebar-logo.png",
+          "alt": "AmeriFreight",
+          "width": 200,
+          "height": 200
+        }
+      },
+      {
+        "id": "uship",
+        "name": "uShip",
+        "logo": {
+          "src": "/company-sidebar-logo.png",
+          "alt": "uShip",
+          "width": 200,
+          "height": 200
+        }
+      }
+    ],
+    "compareCtaLabel": "COMPARE ALL BROKERS",
+    "leaveReview": {
+      "title": "Leave a Review",
+      "description": "Used Sherpa Auto Transport? Help others by sharing your experience.",
+      "ctaLabel": "WRITE A REVIEW",
+      "mapImage": {
+        "src": "/leave-review-map.png",
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    "readyToShip": {
+      "title": "Ready to ship?",
+      "description": "Get a quote or let Transportvibe handle everything.",
+      "getQuoteLabel": "GET QUOTE",
+      "useFullServiceLabel": "USE FULL SERVICE",
+      "backgroundImage": {
+        "src": "/ready-to-ship-truck.png",
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  }
+}

@@ -20,9 +20,12 @@ export function useIntersectionObserver<T extends Element>(
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      setInView(entry.isIntersecting);
-    }, { root, rootMargin, threshold });
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { root, rootMargin, threshold },
+    );
     obs.observe(el);
     return () => obs.disconnect();
   }, [root, rootMargin, threshold]);

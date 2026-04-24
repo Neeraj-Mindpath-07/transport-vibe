@@ -23,19 +23,20 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 /**
  * Primary action control; variants map to Transportvibe palette.
  */
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  function Button({ className, variant = "primary", type = "button", ...props }, ref) {
-    return (
-      <button
-        ref={ref}
-        type={type}
-        className={cn(
-          "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:pointer-events-none",
-          variantClasses[variant],
-          className,
-        )}
-        {...props}
-      />
-    );
-  },
-);
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  { className, variant = "primary", type = "button", ...props },
+  ref,
+) {
+  return (
+    <button
+      ref={ref}
+      type={type}
+      className={cn(
+        "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:pointer-events-none",
+        variantClasses[variant],
+        className,
+      )}
+      {...props}
+    />
+  );
+});
