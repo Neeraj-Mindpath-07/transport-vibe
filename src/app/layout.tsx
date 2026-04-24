@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Rethink_Sans } from "next/font/google";
+import { MarketingChrome } from "@/components/layout/marketing-chrome";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -33,8 +34,10 @@ export default function RootLayout({
       lang="en"
       className={`${rethinkSans.variable} ${openSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-body-md text-text-black">
-        {children}
+      <body className="flex min-h-full flex-col font-sans text-body-md text-text-black">
+        <MarketingChrome>
+          <div className="flex flex-1 flex-col">{children}</div>
+        </MarketingChrome>
       </body>
     </html>
   );

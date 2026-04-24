@@ -6,6 +6,6 @@ export const siteConfig = {
   productName: "Company Details Page",
   /** Used in metadata and visible title patterns */
   shortTitle: "Company Details",
-  /** Default sticky offset (px); mirrors `--header-offset` until layout is final */
-  headerOffsetPx: 72,
+  /** Sticky offset = Figma Navigation frame height (330:6333), px */
+  headerOffsetPx: 131,
 } as const;

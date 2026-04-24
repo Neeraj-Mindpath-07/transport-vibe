@@ -5,7 +5,14 @@
  * Raw values use --cd-* ; @theme maps them to Tailwind utilities (avoids self-reference).
  */
 :root {
-  --header-offset: 72px;
+  --header-offset: 131px;
+
+  /* Figma-only until next sync */
+  --cd-brand-deep: #135128;
+  --cd-surface-search: #f3f0f0;
+  --cd-social-bg: #ededed;
+  --cd-caption-muted: #71717a;
+  --cd-disclaimer-text: #52525a;
 
   --cd-primary-100: #e7fcee;
   --cd-primary-200: #c1efd1;
@@ -71,6 +78,8 @@
   --color-warning: var(--cd-warning);
   --color-alert: var(--cd-alert);
   --color-alert-light: var(--cd-alert-light);
+
+  --color-brand-deep: var(--cd-brand-deep);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
