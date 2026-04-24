@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — Transportvibe / Figma variables (file rvG6ZoipbH8L2kZKOWsC2B).
+ * Raw values use --cd-* ; @theme maps them to Tailwind utilities (avoids self-reference).
+ */
+:root {
+  --header-offset: 72px;
+
+  --cd-primary-100: #e7fcee;
+  --cd-primary-200: #c1efd1;
+  --cd-primary-500: #30cb65;
+  --cd-primary-600: #26a251;
+  --cd-primary-700: #1d7a3d;
+
+  --cd-secondary-300: #a3b4fe;
+  --cd-secondary-500: #3358fd;
+
+  --cd-neutral-0: #ffffff;
+  --cd-neutral-100: #f5f5f5;
+  --cd-neutral-200: #e5e5e5;
+  --cd-neutral-300: #bdbdbd;
+  --cd-neutral-400: #9e9e9e;
+  --cd-neutral-500: #757575;
+  --cd-neutral-900: #0f0f0f;
+
+  --cd-gray-200: #eaecf0;
+  --cd-gray-600: #475467;
+  --cd-slate-500: #667085;
+
+  --cd-text-black: #0f0f0f;
+  --cd-text-white: #fafafa;
+  --cd-text-dark-gray: #767575;
+  --cd-text-light-gray: #bdbdbd;
+
+  --cd-warning: #f03939;
+  --cd-alert: #e59d32;
+  --cd-alert-light: #efb867;
+
+  --background: var(--cd-neutral-100);
+  --foreground: var(--cd-text-black);
+}
+
+@theme inline {
+  --color-primary-100: var(--cd-primary-100);
+  --color-primary-200: var(--cd-primary-200);
+  --color-primary-500: var(--cd-primary-500);
+  --color-primary-600: var(--cd-primary-600);
+  --color-primary-700: var(--cd-primary-700);
+
+  --color-secondary-300: var(--cd-secondary-300);
+  --color-secondary-500: var(--cd-secondary-500);
+
+  --color-neutral-0: var(--cd-neutral-0);
+  --color-neutral-100: var(--cd-neutral-100);
+  --color-neutral-200: var(--cd-neutral-200);
+  --color-neutral-300: var(--cd-neutral-300);
+  --color-neutral-400: var(--cd-neutral-400);
+  --color-neutral-500: var(--cd-neutral-500);
+  --color-neutral-900: var(--cd-neutral-900);
+
+  --color-gray-200: var(--cd-gray-200);
+  --color-gray-600: var(--cd-gray-600);
+  --color-slate-500: var(--cd-slate-500);
+
+  --color-text-black: var(--cd-text-black);
+  --color-text-white: var(--cd-text-white);
+  --color-text-dark-gray: var(--cd-text-dark-gray);
+  --color-text-light-gray: var(--cd-text-light-gray);
+
+  --color-warning: var(--cd-warning);
+  --color-alert: var(--cd-alert);
+  --color-alert-light: var(--cd-alert-light);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --spacing-figma-6: 6px;
+  --spacing-figma-8: 8px;
+  --spacing-figma-10: 10px;
+  --spacing-figma-12: 12px;
+
+  --font-display: var(--font-rethink-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --text-display-h2: 3rem;
+  --text-display-h2--line-height: 1.2;
+  --text-display-h2--letter-spacing: -0.03125rem;
+
+  --text-display-h4: 2rem;
+  --text-display-h4--line-height: 1.2;
+
+  --text-display-h5: 1.5rem;
+  --text-display-h5--line-height: 1.2;
+
+  --text-display-h6: 1.25rem;
+  --text-display-h6--line-height: 1.24;
+
+  --text-display-h7: 1rem;
+  --text-display-h7--line-height: 1.24;
+
+  --text-display-label: 0.875rem;
+  --text-display-label--line-height: 1.3125rem;
+
+  --text-display-caption: 0.75rem;
+  --text-display-caption--line-height: 1.1875rem;
+
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.4;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.48;
+
+  --text-body-xs: 0.75rem;
+  --text-body-xs--line-height: 1.4;
+
+  --text-body-label: 0.875rem;
+  --text-body-label--line-height: 1.4;
+
+  --text-body-caption: 0.6875rem;
+  --text-body-caption--line-height: 1.4;
+
+  --radius-card: 0.75rem;
+  --radius-lg: 0.5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  line-height: var(--text-body-md--line-height);
+}
