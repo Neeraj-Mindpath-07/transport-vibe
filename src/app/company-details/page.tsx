@@ -24,7 +24,7 @@ export default async function CompanyDetailsPage() {
 
   return (
     <>
-      <BannerSection company={data.company} banner={data.banner} />
+      <BannerSection banner={data.banner} />
 
       <CompanyDetailsLayout
         sidebar={<StickySidebar data={data.sidebar} />}

@@ -2,6 +2,7 @@ import { AtSign, Hash, Link2, Mail, MessageCircle, Phone, Send, Share2 } from "l
 import Image from "next/image";
 import Link from "next/link";
 import { figmaAssets } from "@/config/figma-assets";
+import { layoutAssets } from "@/config/layout-assets";
 import { cn } from "@/lib/cn";
 
 const footerColumns = {
@@ -106,13 +107,14 @@ export function SiteFooter() {
         {/* Columns */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="flex flex-col gap-6 lg:col-span-4">
-            <Link href="/" className="relative block h-[42.5px] w-[194px]">
+            <Link href="/" className="relative block h-8 w-[146px] sm:h-[42.5px] sm:w-[194px]">
               <Image
-                src={figmaAssets.footerLogo}
+                src={layoutAssets.headerLogo}
                 alt="Transportvibe"
                 fill
                 className="object-contain object-left"
                 sizes="194px"
+                unoptimized
               />
             </Link>
             <p className="max-w-[320px] text-body-sm leading-[1.4] text-text-black">
@@ -146,11 +148,12 @@ export function SiteFooter() {
                     className="flex items-center gap-2 text-body-sm text-text-dark-gray hover:text-text-black"
                   >
                     <Image
-                      src={figmaAssets.navShipAdvisorIcon}
+                      src={layoutAssets.whisperMenu}
                       alt=""
-                      width={11}
-                      height={13}
+                      width={15}
+                      height={16}
                       className="shrink-0"
+                      unoptimized
                     />
                     {t}
                   </Link>

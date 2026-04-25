@@ -5,6 +5,42 @@ export type CompanyStat = {
   value: string;
 };
 
+export type HeroFeatureBadge = {
+  id: "highly_trusted" | "fmcsa_verified" | "customer_favorite";
+  label: string;
+};
+
+export type HeroBottomStat = {
+  value: string;
+  label: string;
+};
+
+export type CompanyHeroBanner = {
+  /** Thin top line (e.g. compensation disclosure + link) */
+  disclaimer: {
+    text: string;
+    linkLabel: string;
+    linkHref: string;
+  };
+  backgroundImage: { src: string; alt: string; width: number; height: number };
+  logo: { src: string; alt: string; width: number; height: number };
+  companyName: string;
+  /** Stars row is derived (e.g. 4.8 → four full + partial) */
+  ratingStars: number;
+  /** e.g. "4.8 (2,100)" */
+  reviewSummary: string;
+  featureBadges: HeroFeatureBadge[];
+  trustScore: {
+    title: string;
+    subtitle: string;
+    value: number;
+    ringLabel: string;
+    /** Ring fill 0–100 */
+    gaugePercent: number;
+  };
+  bottomStats: HeroBottomStat[];
+};
+
 export type TrustScorePillar = {
   id: string;
   title: string;
@@ -102,12 +138,7 @@ export type CompanyDetailsPageData = {
     tagline: string;
     location: string;
   };
-  banner: {
-    title: string;
-    subtitle: string;
-    badges: string[];
-    stats: CompanyStat[];
-  };
+  banner: CompanyHeroBanner;
   score: {
     title: string;
     overall: number;

@@ -9,6 +9,14 @@
 
   /* Figma-only until next sync */
   --cd-brand-deep: #135128;
+  /* Hero (company banner) — reference layout */
+  --cd-hero-disclaimer: #3d4d44;
+  --cd-hero-overlay: rgba(5, 46, 22, 0.78);
+  --cd-hero-stats: #051a0f;
+  --cd-hero-badge-trusted: #1e3a8a;
+  --cd-hero-badge-fmcsa: #374151;
+  --cd-hero-badge-favorite: #9a3412;
+  --cd-hero-star: #fbbf24;
   --cd-surface-search: #f3f0f0;
   --cd-social-bg: #ededed;
   --cd-caption-muted: #71717a;

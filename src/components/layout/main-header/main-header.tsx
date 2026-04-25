@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { figmaAssets } from "@/config/figma-assets";
+import { layoutAssets } from "@/config/layout-assets";
 import { cn } from "@/lib/cn";
 import { mainNavLinks } from "./nav-links";
 import { MobileMainNav } from "./mobile-main-nav";
@@ -23,14 +23,15 @@ export function MainHeader() {
         </div>
         <div className="hidden items-center justify-between gap-8 lg:flex">
           <div className="flex min-w-0 flex-1 items-center gap-8">
-            <Link href="/" className="relative h-8 w-[146px] shrink-0">
+            <Link href="/" className="relative block h-8 w-[146px] shrink-0">
               <Image
-                src={figmaAssets.navLogo}
+                src={layoutAssets.headerLogo}
                 alt="Transportvibe — We Drive the Truth in Auto Transport Reviews"
                 fill
                 className="object-contain object-left"
                 sizes="146px"
                 priority
+                unoptimized
               />
             </Link>
             <nav aria-label="Primary" className="min-w-0">
@@ -43,11 +44,12 @@ export function MainHeader() {
                     >
                       {item.label === "ShipAdvisor AI" ? (
                         <Image
-                          src={figmaAssets.navShipAdvisorIcon}
+                          src={layoutAssets.whisperMenu}
                           alt=""
                           width={15}
-                          height={13}
+                          height={16}
                           className="shrink-0"
+                          unoptimized
                         />
                       ) : null}
                       <span>{item.label}</span>
@@ -65,7 +67,7 @@ export function MainHeader() {
           <div className="flex shrink-0 items-center gap-4">
             <Link
               href="#"
-              className="rounded-sm bg-neutral-0 px-5 py-2.5 text-display-caption font-bold uppercase text-primary-700 shadow-sm ring-1 ring-neutral-200"
+              className="text-display-caption font-bold uppercase text-[#1D7A3D] hover:underline hover:opacity-90"
             >
               Leave review
             </Link>

@@ -1,4 +1,4 @@
-import { assert, isRecord, isStringArray } from "@/lib/assert";
+import { assert, isRecord } from "@/lib/assert";
 import rawData from "./company-details.mock.json";
 import type { CompanyDetailsPageData } from "../types/company-details-page";
 
@@ -30,7 +30,7 @@ function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageDa
   const banner = value.banner;
   const reviews = value.reviews;
 
-  if (!isRecord(banner) || !isStringArray(banner.badges)) {
+  if (!isRecord(banner) || !Array.isArray(banner.bottomStats)) {
     return false;
   }
 

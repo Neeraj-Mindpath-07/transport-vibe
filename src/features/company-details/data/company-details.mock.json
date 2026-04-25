@@ -1,18 +1,48 @@
 {
   "company": {
-    "name": "Mercury Auto Transport",
+    "name": "Rimberio Auto Transport",
     "tagline": "Reliable door-to-door shipping backed by verified reviews.",
     "location": "Chicago, IL"
   },
   "banner": {
-    "title": "Mercury Auto Transport",
-    "subtitle": "Compare verified ratings, delivery reliability, and real customer experiences before booking.",
-    "badges": ["FMCSA Checked", "BBB A+", "Licensed Broker"],
-    "stats": [
-      { "label": "Customer Reviews", "value": "15K+" },
-      { "label": "Avg. Rating", "value": "4.5" },
-      { "label": "FMCSA Checked", "value": "100%" },
-      { "label": "Verified Companies", "value": "50+" }
+    "disclaimer": {
+      "text": "We are not a government agency and may be paid by companies displayed.",
+      "linkLabel": "How It Works",
+      "linkHref": "#"
+    },
+    "backgroundImage": {
+      "src": "/company-hero-bg.png",
+      "alt": "Highway through hills at dusk",
+      "width": 1366,
+      "height": 385
+    },
+    "logo": {
+      "src": "https://www.figma.com/api/mcp/asset/cb32dead-6777-4ec1-b8b5-fcab679a85ac",
+      "alt": "Rimberio Auto Transport",
+      "width": 120,
+      "height": 120
+    },
+    "companyName": "Rimberio Auto Transport",
+    "ratingStars": 4.8,
+    "reviewSummary": "4.8 (2,100)",
+    "featureBadges": [
+      { "id": "highly_trusted", "label": "Highly Trusted" },
+      { "id": "fmcsa_verified", "label": "FMCSA Verified" },
+      { "id": "customer_favorite", "label": "Customer Favorite" }
+    ],
+    "trustScore": {
+      "title": "Trust Score",
+      "subtitle": "6 platforms · 13,700+ reviews",
+      "value": 96,
+      "ringLabel": "Highly Trusted",
+      "gaugePercent": 96
+    },
+    "bottomStats": [
+      { "value": "93%", "label": "Pricing accuracy" },
+      { "value": "96%", "label": "Vehicle condition" },
+      { "value": "94%", "label": "On-time delivery" },
+      { "value": "91%", "label": "Communication" },
+      { "value": "13.7k", "label": "Total reviews" }
     ]
   },
   "score": {
@@ -67,7 +97,7 @@
   "companyInformation": {
     "title": "Company Information",
     "about": [
-      "Mercury Auto Transport is a licensed broker with nationwide open and enclosed options.",
+      "Rimberio Auto Transport is a licensed broker with nationwide open and enclosed options.",
       "The company is generally strongest on major interstate corridors with 7-14 day booking windows."
     ],
     "quickFacts": [
@@ -333,7 +363,7 @@
         "width": 200,
         "height": 200
       },
-      "companyName": "Mercury Auto Transport",
+      "companyName": "Rimberio Auto Transport",
       "rating": 4.8,
       "reviewCount": 2100,
       "trustScore": 96,
