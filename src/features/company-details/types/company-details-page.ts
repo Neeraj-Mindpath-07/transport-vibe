@@ -100,6 +100,8 @@ export type ReviewMedia = {
   alt: string;
   width: number;
   height: number;
+  /** When `video`, `src` should be a direct URL string. */
+  kind?: "image" | "video";
 };
 
 export type ReviewCriterionRating = {
