@@ -112,26 +112,62 @@
     ]
   },
   "comparison": {
-    "title": "Compare With Others",
-    "ctaLabel": "View Full Comparison",
-    "items": [
+    "title": "What They’re Good At & What to Watch",
+    "reviewAttribution": "From 13,700+ reviews",
+    "prosHeading": "Where Montway delivers",
+    "consHeading": "What to be aware of",
+    "pros": [
       {
-        "id": "sherpa",
-        "name": "Sherpa Auto Transport",
-        "trustScore": 90,
-        "summary": "Excellent enclosed transport consistency with higher average quote ceilings."
+        "id": "pricing-accuracy",
+        "title": "Pricing accuracy — 93%",
+        "description": "Quotes hold significantly more often than the 79% platform average."
       },
       {
-        "id": "amerfreight",
-        "name": "AmeriFreight",
-        "trustScore": 88,
-        "summary": "Strong discount programs and military shipping options."
+        "id": "vehicle-condition",
+        "title": "Vehicle condition — 96%",
+        "description": "Cars arrive in the same state they left — best in dataset."
       },
       {
-        "id": "uship",
-        "name": "uShip",
-        "trustScore": 84,
-        "summary": "Marketplace flexibility with wider carrier variance by route."
+        "id": "major-corridors",
+        "title": "Major corridors (#1 ranked)",
+        "description": "CA→NY, FL→NY, TX→CA — deepest carrier network on these lanes."
+      },
+      {
+        "id": "on-time",
+        "title": "On-time delivery — 94%",
+        "description": "Transit estimates are accurate on most major routes."
+      },
+      {
+        "id": "repeat-customers",
+        "title": "31% repeat customers",
+        "description": "Experienced shippers keep coming back — a reliable trust signal."
+      }
+    ],
+    "cons": [
+      {
+        "id": "mid-transit-silence",
+        "title": "Mid-transit silence",
+        "description": "9% of reviews flag gaps in updates once the vehicle is loaded. Proactively get the driver’s number at pickup."
+      },
+      {
+        "id": "rural-pickup",
+        "title": "Rural pickup locations",
+        "description": "Network thins fast off major highways. Adds time and often cost."
+      },
+      {
+        "id": "peak-season",
+        "title": "Peak season (May–Sep)",
+        "description": "Longer wait times and carrier assignment delays. Book 10–14 days out."
+      },
+      {
+        "id": "last-minute",
+        "title": "Last-minute premium",
+        "description": "1–3 day bookings often see price adjustments above original quote."
+      },
+      {
+        "id": "issue-resolution",
+        "title": "Issue resolution — 84%",
+        "description": "Their lowest metric. Resolution process can be slow when things go wrong."
       }
     ]
   },

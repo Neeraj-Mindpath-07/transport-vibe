@@ -52,6 +52,12 @@
   --cd-alert: #e59d32;
   --cd-alert-light: #efb867;
 
+  /* Pros / cons “Good At & What to Watch” (reference art) */
+  --cd-pros-accent: #48bb78;
+  --cd-pros-badge-bg: #c6f6d5;
+  --cd-watch-accent: #ed8936;
+  --cd-watch-badge-bg: #feebc8;
+
   /* Semantic aliases for feature-level sections */
   --cd-surface-page: #f5f5f5;
   --cd-surface-card: #ffffff;
@@ -96,6 +102,11 @@
   --color-warning: var(--cd-warning);
   --color-alert: var(--cd-alert);
   --color-alert-light: var(--cd-alert-light);
+
+  --color-pros-accent: var(--cd-pros-accent);
+  --color-pros-badge: var(--cd-pros-badge-bg);
+  --color-watch-accent: var(--cd-watch-accent);
+  --color-watch-badge: var(--cd-watch-badge-bg);
 
   --color-brand-deep: var(--cd-brand-deep);
   --color-surface: var(--cd-surface-card);

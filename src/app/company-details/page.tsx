@@ -8,6 +8,7 @@ import { DisclaimerSection } from "@/features/company-details/components/disclai
 import { ImageGallery } from "@/features/company-details/components/image-gallery/image-gallery";
 import { NewsletterSection } from "@/features/company-details/components/newsletter/newsletter-section";
 import { PaymentStripSection } from "@/features/company-details/components/payment-strip/payment-strip-section";
+import { CustomerReviewsAcrossPlatformsSection } from "@/features/company-details/components/customer-reviews-across-platforms/customer-reviews-across-platforms-section";
 import { ReviewsSection } from "@/features/company-details/components/reviews/reviews-section";
 import { SectionNav } from "@/features/company-details/components/section-nav/section-nav";
 import { StickySidebar } from "@/features/company-details/components/sticky-sidebar/sticky-sidebar";
@@ -33,10 +34,11 @@ export default async function CompanyDetailsPage() {
         <SectionNav sections={scrollRegistry} />
         <div className="space-y-6">
           <CompanyScoreSection data={data.score} />
+          <ComparisonSection data={data.comparison} />
           <ImageGallery data={data.gallery} />
+          <CustomerReviewsAcrossPlatformsSection />
           <CompanyInformationSection data={data.companyInformation} />
           <ReviewsSection data={data.reviews} />
-          <ComparisonSection data={data.comparison} />
         </div>
       </CompanyDetailsLayout>
 
