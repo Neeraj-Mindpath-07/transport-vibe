@@ -2,7 +2,7 @@ export const scrollRegistry = [
   { id: "trust-score", label: "Trust score" },
   { id: "customer-reviews", label: "Customer Reviews" },
   { id: "company-information", label: "Company Information" },
-  { id: "reviews", label: "Reviews" },
+  { id: "reviews", label: "Customer feedback" },
 ] as const;
 
 export type ScrollSectionId = (typeof scrollRegistry)[number]["id"];

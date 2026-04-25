@@ -120,17 +120,43 @@ export type GalleryImage = {
   tags: string[];
 };
 
+export type ReviewMedia = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** When `video`, `src` should be a direct URL string. */
+  kind?: "image" | "video";
+};
+
+export type ReviewCriterionRating = {
+  label: string;
+  rating: number;
+};
+
 export type CompanyReview = {
   id: string;
   reviewer: string;
+  /** Single-letter or short initial shown in the avatar circle. */
+  reviewerInitial: string;
+  /** Tailwind utility classes for avatar background and text (e.g. bg-primary-100 text-primary-700). */
+  avatarClassName: string;
   rating: number;
-  date: string;
+  /** ISO-8601 timestamp used for sorting. */
+  postedAt: string;
+  /** Human-readable relative time (e.g. "8 hours ago"). */
+  relativeTime: string;
+  amountPaid: string;
+  /** Optional "6 reviews" style badge next to the reviewer name. */
+  reviewerReviewCount?: number;
   serviceType: string;
   state: string;
   vehicle: string;
   verified: boolean;
-  headline: string;
+  headline?: string;
   body: string;
+  criteria: ReviewCriterionRating[];
+  media?: ReviewMedia[];
 };
 
 export type PaymentMethod = {
@@ -193,12 +219,8 @@ export type CompanyDetailsPageData = {
   reviews: {
     title: string;
     description: string;
+    leaveReviewCtaLabel: string;
     pageSize: number;
-    filterOptions: {
-      serviceTypes: string[];
-      states: string[];
-      ratings: number[];
-    };
     items: CompanyReview[];
   };
   paymentStrip: {
