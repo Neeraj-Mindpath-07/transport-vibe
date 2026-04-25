@@ -201,7 +201,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
 
           <div
             className={cn(
-              "relative z-10 mx-auto flex w-full max-w-[1166px] flex-col justify-center",
+              "relative z-10 mx-auto flex w-full flex-col justify-center",
               "px-5 py-6 sm:px-8 sm:py-7 lg:min-h-[var(--hero-main-min)] lg:px-[100px] lg:py-8",
             )}
           >
@@ -209,7 +209,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
               {/* Logo + single text column (title, stars, badges) — vertically centered as one group */}
               <div className="flex min-w-0 flex-1 items-center gap-4 sm:gap-5 lg:max-w-[46rem]">
                 <div className="shrink-0 overflow-hidden rounded-xl bg-white p-2 shadow-sm ring-1 ring-black/[0.06]">
-                  <div className="relative size-14 lg:size-16">
+                  <div className="relative size-14 lg:size-28">
                     <Image
                       src={rimberioLogo}
                       alt={banner.logo.alt}
@@ -248,7 +248,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
                     <StarRow value={banner.ratingStars} />
                     <ReviewSummaryRich summary={banner.reviewSummary} />
                   </div>
-                  <ul className="flex list-none flex-row flex-wrap gap-2 p-0 sm:gap-2.5">
+                  <ul className="flex list-none flex-row max-sm:flex-wrap gap-2 p-0 sm:gap-2.5">
                     {banner.featureBadges.map((b) => (
                       <li key={b.id} className="shrink-0">
                         <span
@@ -267,7 +267,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
                 </div>
               </div>
 
-              <div className="flex w-full shrink-0 items-center justify-between gap-5 sm:max-w-md sm:justify-end lg:max-w-none lg:flex-initial lg:justify-end lg:gap-8">
+              <div className="flex w-full sm: w-[500px] shrink-0 items-center justify-between gap-5 sm:max-w-md sm:justify-end lg:max-w-none lg:flex-initial lg:justify-end lg:gap-8">
                 <div className="min-w-0 space-y-1 text-white">
                   <p className="font-display text-display-h6 font-semibold leading-[var(--text-display-h6--line-height)] lg:text-display-h5 lg:leading-[var(--text-display-h5--line-height)]">
                     {banner.trustScore.title}

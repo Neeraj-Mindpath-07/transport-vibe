@@ -1,4 +1,4 @@
-import { assert, isRecord } from "@/lib/assert";
+import { assert, isRecord, isStringArray } from "@/lib/assert";
 import rawData from "./company-details.mock.json";
 import type { CompanyDetailsPageData } from "../types/company-details-page";
 
