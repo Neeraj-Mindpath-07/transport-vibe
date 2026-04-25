@@ -226,110 +226,232 @@
     ]
   },
   "reviews": {
-    "title": "Reviews",
-    "description": "Filter by service type, state, and score to evaluate fit for your route.",
-    "pageSize": 4,
-    "filterOptions": {
-      "serviceTypes": ["Open Transport", "Enclosed Transport", "Expedited"],
-      "states": ["CA", "FL", "TX", "NY", "IL"],
-      "ratings": [5, 4, 3]
-    },
+    "title": "Recent Customer Feedback",
+    "description": "Last 30 days - 8 reviews",
+    "leaveReviewCtaLabel": "Leave a review",
+    "pageSize": 3,
     "items": [
       {
         "id": "rev-1",
-        "reviewer": "Nina Patel",
+        "reviewer": "James",
+        "reviewerInitial": "J",
+        "avatarClassName": "bg-primary-100 text-primary-700",
         "rating": 5,
-        "date": "2026-02-14",
+        "postedAt": "2026-04-25T14:00:00.000Z",
+        "relativeTime": "8 hours ago",
+        "amountPaid": "$ 750.00",
+        "reviewerReviewCount": 6,
         "serviceType": "Open Transport",
         "state": "CA",
-        "vehicle": "2023 Tesla Model Y",
+        "vehicle": "2022 Honda Civic",
         "verified": true,
-        "headline": "Delivered on time with clear updates",
-        "body": "Pickup happened within a day of the quoted window and the driver shared status updates at each state line."
+        "body": "Pickup happened within a day of the quoted window and the driver shared status updates at each state line. The car arrived in perfect condition and the final price matched the original quote.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 5 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 5 },
+          { "label": "Communication", "rating": 4 },
+          { "label": "Pickup timing", "rating": 5 },
+          { "label": "Issue resolution", "rating": 5 }
+        ],
+        "media": [
+          {
+            "src": "Rectangle 181 (1).png",
+            "alt": "Vehicle at pickup",
+            "width": 120,
+            "height": 80
+          },
+          {
+            "src": "Rectangle 181.png",
+            "alt": "Delivery documentation",
+            "width": 120,
+            "height": 80
+          }
+        ]
       },
       {
         "id": "rev-2",
+        "reviewer": "Nina Patel",
+        "reviewerInitial": "N",
+        "avatarClassName": "bg-secondary-300 text-secondary-500",
+        "rating": 5,
+        "postedAt": "2026-04-24T09:30:00.000Z",
+        "relativeTime": "1 day ago",
+        "amountPaid": "$ 1,240.00",
+        "reviewerReviewCount": 3,
+        "serviceType": "Enclosed Transport",
+        "state": "FL",
+        "vehicle": "2023 Tesla Model Y",
+        "verified": true,
+        "body": "Enclosed transport was worth it for our EV. Dispatch was responsive and the carrier treated the vehicle carefully from door to door.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 5 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 4 },
+          { "label": "Communication", "rating": 5 },
+          { "label": "Pickup timing", "rating": 5 },
+          { "label": "Issue resolution", "rating": 4 }
+        ],
+        "media": [
+          {
+            "src": "Rectangle 182.png",
+            "alt": "Enclosed trailer",
+            "width": 120,
+            "height": 80
+          }
+        ]
+      },
+      {
+        "id": "rev-3",
         "reviewer": "Jonathan Brooks",
+        "reviewerInitial": "J",
+        "avatarClassName": "bg-neutral-200 text-text-dark-gray",
         "rating": 4,
-        "date": "2026-02-08",
+        "postedAt": "2026-04-22T18:15:00.000Z",
+        "relativeTime": "3 days ago",
+        "amountPaid": "$ 2,100.00",
         "serviceType": "Enclosed Transport",
         "state": "FL",
         "vehicle": "2021 Porsche 911",
         "verified": true,
-        "headline": "Great care for enclosed shipment",
-        "body": "No condition issues at delivery. Communication was strong before pickup and at final handoff."
+        "body": "No condition issues at delivery. Communication was strong before pickup and at final handoff. Minor delay on the estimated delivery day but the team kept us informed.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 4 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 4 },
+          { "label": "Communication", "rating": 5 },
+          { "label": "Pickup timing", "rating": 4 },
+          { "label": "Issue resolution", "rating": 4 }
+        ]
       },
       {
-        "id": "rev-3",
+        "id": "rev-4",
         "reviewer": "Ariella Chen",
+        "reviewerInitial": "A",
+        "avatarClassName": "bg-primary-200 text-primary-700",
         "rating": 5,
-        "date": "2026-01-29",
+        "postedAt": "2026-04-20T11:00:00.000Z",
+        "relativeTime": "5 days ago",
+        "amountPaid": "$ 980.00",
         "serviceType": "Expedited",
         "state": "TX",
         "vehicle": "2020 Ford F-150",
         "verified": true,
-        "headline": "Expedited move worked exactly as promised",
-        "body": "Needed a fast relocation and dispatch arranged pickup in under 24 hours. Pricing stayed within quote."
+        "body": "Needed a fast relocation and dispatch arranged pickup in under 24 hours. Pricing stayed within quote and the truck showed up exactly when promised.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 5 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 5 },
+          { "label": "Communication", "rating": 5 },
+          { "label": "Pickup timing", "rating": 5 },
+          { "label": "Issue resolution", "rating": 5 }
+        ],
+        "media": [
+          {
+            "src": "Rectangle 181.png",
+            "alt": "Pickup paperwork",
+            "width": 120,
+            "height": 80
+          },
+          {
+            "src": "Rectangle 182.png",
+            "alt": "Payment confirmation",
+            "width": 120,
+            "height": 80
+          }
+        ]
       },
       {
-        "id": "rev-4",
+        "id": "rev-5",
         "reviewer": "Michael Reed",
+        "reviewerInitial": "M",
+        "avatarClassName": "bg-primary-100 text-primary-700",
         "rating": 4,
-        "date": "2026-01-15",
+        "postedAt": "2026-04-15T08:45:00.000Z",
+        "relativeTime": "1 week ago",
+        "amountPaid": "$ 1,050.00",
         "serviceType": "Open Transport",
         "state": "NY",
         "vehicle": "2018 Honda Accord",
         "verified": true,
-        "headline": "Solid value for cross-country shipping",
-        "body": "Car arrived clean and the final cost matched the estimate. One update lag during transit, otherwise smooth."
-      },
-      {
-        "id": "rev-5",
-        "reviewer": "Sofia Martinez",
-        "rating": 5,
-        "date": "2025-12-20",
-        "serviceType": "Open Transport",
-        "state": "IL",
-        "vehicle": "2022 Toyota RAV4",
-        "verified": true,
-        "headline": "Professional broker and transparent process",
-        "body": "Everything from confirmation to delivery was documented clearly and handled quickly."
+        "body": "Car arrived clean and the final cost matched the estimate. One update lag during transit, otherwise smooth end-to-end.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 5 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 4 },
+          { "label": "Communication", "rating": 3 },
+          { "label": "Pickup timing", "rating": 5 },
+          { "label": "Issue resolution", "rating": 4 }
+        ]
       },
       {
         "id": "rev-6",
         "reviewer": "Daniel Kim",
+        "reviewerInitial": "D",
+        "avatarClassName": "bg-neutral-200 text-text-dark-gray",
         "rating": 3,
-        "date": "2025-12-10",
+        "postedAt": "2026-04-10T16:20:00.000Z",
+        "relativeTime": "2 weeks ago",
+        "amountPaid": "$ 3,400.00",
         "serviceType": "Enclosed Transport",
         "state": "CA",
         "vehicle": "2019 BMW M4",
         "verified": true,
-        "headline": "Good carrier quality but delayed updates",
-        "body": "Vehicle arrived safely, but I had to request two status updates manually during the route."
+        "body": "Vehicle arrived safely, but I had to request two status updates manually during the route. Carrier quality was good once we connected.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 4 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 4 },
+          { "label": "Communication", "rating": 3 },
+          { "label": "Pickup timing", "rating": 3 },
+          { "label": "Issue resolution", "rating": 3 }
+        ]
       },
       {
         "id": "rev-7",
         "reviewer": "Grace Hoffman",
+        "reviewerInitial": "G",
+        "avatarClassName": "bg-secondary-300 text-secondary-500",
         "rating": 4,
-        "date": "2025-11-28",
+        "postedAt": "2026-04-05T12:00:00.000Z",
+        "relativeTime": "3 weeks ago",
+        "amountPaid": "$ 1,890.00",
         "serviceType": "Expedited",
         "state": "TX",
         "vehicle": "2024 Kia Telluride",
         "verified": true,
-        "headline": "Fast pickup and accurate quote",
-        "body": "Rush shipment from Dallas to Miami completed earlier than expected with no damage concerns."
+        "body": "Rush shipment from Dallas to Miami completed earlier than expected with no damage concerns. Would book again for a tight timeline.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 4 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 5 },
+          { "label": "Communication", "rating": 4 },
+          { "label": "Pickup timing", "rating": 5 },
+          { "label": "Issue resolution", "rating": 4 }
+        ]
       },
       {
         "id": "rev-8",
         "reviewer": "Ethan Rivera",
+        "reviewerInitial": "E",
+        "avatarClassName": "bg-primary-100 text-primary-700",
         "rating": 5,
-        "date": "2025-11-15",
+        "postedAt": "2026-03-28T07:00:00.000Z",
+        "relativeTime": "Mar 28, 2026",
+        "amountPaid": "$ 920.00",
         "serviceType": "Open Transport",
         "state": "FL",
         "vehicle": "2017 Subaru Outback",
         "verified": true,
-        "headline": "Easy booking and smooth delivery",
-        "body": "The coordinator was responsive and made it easy to compare options before I confirmed."
+        "body": "The coordinator was responsive and made it easy to compare options before I confirmed. Delivery window was accurate and the driver was professional.",
+        "criteria": [
+          { "label": "Pricing accuracy", "rating": 5 },
+          { "label": "Vehicle condition", "rating": 5 },
+          { "label": "Delivery timing", "rating": 5 },
+          { "label": "Communication", "rating": 5 },
+          { "label": "Pickup timing", "rating": 4 },
+          { "label": "Issue resolution", "rating": 5 }
+        ]
       }
     ]
   },
