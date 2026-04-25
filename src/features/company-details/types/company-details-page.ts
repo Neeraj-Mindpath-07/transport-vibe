@@ -44,11 +44,10 @@ export type SidebarReadyToShip = {
   backgroundImage: { src: string; width: number; height: number };
 };
 
-export type ComparisonItem = {
+export type ProsConsListItem = {
   id: string;
-  name: string;
-  trustScore: number;
-  summary: string;
+  title: string;
+  description: string;
 };
 
 export type GalleryImage = {
@@ -123,8 +122,11 @@ export type CompanyDetailsPageData = {
   };
   comparison: {
     title: string;
-    ctaLabel: string;
-    items: ComparisonItem[];
+    reviewAttribution: string;
+    prosHeading: string;
+    consHeading: string;
+    pros: ProsConsListItem[];
+    cons: ProsConsListItem[];
   };
   gallery: {
     title: string;
