@@ -267,7 +267,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
                 </div>
               </div>
 
-              <div className="flex w-full sm: w-[500px] shrink-0 items-center justify-between gap-5 sm:max-w-md sm:justify-end lg:max-w-none lg:flex-initial lg:justify-end lg:gap-8">
+              <div className="flex w-full sm:w-[500px] shrink-0 items-center justify-between gap-5 sm:max-w-md sm:justify-end lg:max-w-none lg:flex-initial lg:justify-end lg:gap-8">
                 <div className="min-w-0 space-y-1 text-white">
                   <p className="font-display text-display-h6 font-semibold leading-[var(--text-display-h6--line-height)] lg:text-display-h5 lg:leading-[var(--text-display-h5--line-height)]">
                     {banner.trustScore.title}
