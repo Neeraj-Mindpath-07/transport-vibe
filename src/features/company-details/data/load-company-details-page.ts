@@ -128,6 +128,10 @@ function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageDa
     return false;
   }
 
+  if (!isNonEmptyString(reviews.leaveReviewCtaLabel)) {
+    return false;
+  }
+
   if (!isComparisonBlock(value.comparison)) {
     return false;
   }

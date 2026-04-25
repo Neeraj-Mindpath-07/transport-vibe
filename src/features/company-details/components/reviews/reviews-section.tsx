@@ -1,16 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Pagination } from "@/components/ui/pagination";
 import {
-  applyReviewFilters,
-  defaultReviewFilterState,
+  buildCustomerFeedbackList,
+  defaultCustomerFeedbackState,
   paginateReviews,
-  type ReviewFilterState,
+  type CustomerFeedbackState,
 } from "../../lib/filter-state";
 import { SectionShell } from "../section-shell";
-import { FilterBar } from "./filter-bar";
+import { RatingFilterTabs } from "./rating-filter-tabs";
 import { ReviewCard } from "./review-card";
+import { ReviewSortSelect } from "./review-sort-select";
 import type { CompanyDetailsPageData } from "../../types/company-details-page";
 
 type ReviewsSectionProps = {
@@ -18,45 +20,49 @@ type ReviewsSectionProps = {
 };
 
 export function ReviewsSection({ data }: ReviewsSectionProps) {
-  const [state, setState] = useState<ReviewFilterState>(defaultReviewFilterState);
-  const { page, ...filterState } = state;
+  const [state, setState] = useState<CustomerFeedbackState>(defaultCustomerFeedbackState);
+  const { page, ...listState } = state;
 
-  const filteredReviews = useMemo(
-    () => applyReviewFilters(data.items, filterState),
-    [data.items, filterState],
+  const processed = useMemo(
+    () => buildCustomerFeedbackList(data.items, listState),
+    [data.items, listState],
   );
 
-  const totalPages = Math.max(1, Math.ceil(filteredReviews.length / data.pageSize));
+  const totalPages = Math.max(1, Math.ceil(processed.length / data.pageSize));
   const currentPage = Math.min(page, totalPages);
-  const pagedReviews = paginateReviews(filteredReviews, currentPage, data.pageSize);
+  const pagedReviews = useMemo(
+    () => paginateReviews(processed, currentPage, data.pageSize),
+    [processed, currentPage, data.pageSize],
+  );
 
   return (
-    <SectionShell id="reviews" title={data.title} description={data.description}>
-      <div className="space-y-4">
-        <FilterBar
-          state={state}
-          serviceTypes={data.filterOptions.serviceTypes}
-          states={data.filterOptions.states}
-          ratings={data.filterOptions.ratings}
-          onSearchChange={(search) => setState((prev) => ({ ...prev, search, page: 1 }))}
-          onServiceTypesChange={(values) =>
-            setState((prev) => ({ ...prev, serviceTypes: values, page: 1 }))
-          }
-          onStatesChange={(values) => setState((prev) => ({ ...prev, states: values, page: 1 }))}
-          onRatingsChange={(values) => setState((prev) => ({ ...prev, ratings: values, page: 1 }))}
-          onReset={() => setState(defaultReviewFilterState)}
+    <SectionShell
+      id="reviews"
+      title={data.title}
+      description={data.description}
+      headerEnd={
+        <>
+          <ReviewSortSelect
+            value={state.sort}
+            onChange={(sort) => setState((previous) => ({ ...previous, sort, page: 1 }))}
+          />
+          <Button className="h-11 uppercase tracking-wide">{data.leaveReviewCtaLabel}</Button>
+        </>
+      }
+      headerAccessory={
+        <RatingFilterTabs
+          active={state.ratingTab}
+          onChange={(ratingTab) => setState((previous) => ({ ...previous, ratingTab, page: 1 }))}
         />
-
-        <p className="text-body-sm text-text-dark-gray">
-          Showing {pagedReviews.length} of {filteredReviews.length} matching reviews
-        </p>
-
+      }
+    >
+      <div className="space-y-4">
         {pagedReviews.length === 0 ? (
           <div className="rounded-lg border border-neutral-200 bg-neutral-100 px-4 py-8 text-center text-body-sm text-text-dark-gray">
-            No reviews match the selected filters.
+            No reviews match the selected rating.
           </div>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-4">
             {pagedReviews.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
@@ -66,7 +72,8 @@ export function ReviewsSection({ data }: ReviewsSectionProps) {
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          onPageChange={(page) => setState((prev) => ({ ...prev, page }))}
+          onPageChange={(nextPage) => setState((previous) => ({ ...previous, page: nextPage }))}
+          className="pt-2"
         />
       </div>
     </SectionShell>
