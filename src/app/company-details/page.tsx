@@ -33,10 +33,10 @@ export default async function CompanyDetailsPage() {
         <SectionNav sections={scrollRegistry} />
         <div className="space-y-6">
           <CompanyScoreSection data={data.score} />
+          <ComparisonSection data={data.comparison} />
           <ImageGallery data={data.gallery} />
           <CompanyInformationSection data={data.companyInformation} />
           <ReviewsSection data={data.reviews} />
-          <ComparisonSection data={data.comparison} />
         </div>
       </CompanyDetailsLayout>
 

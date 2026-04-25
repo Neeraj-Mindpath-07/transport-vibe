@@ -18,6 +18,44 @@ function hasRequiredTopLevelKeys(value: Record<string, unknown>): boolean {
   ].every((key) => key in value);
 }
 
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.length > 0;
+}
+
+function isProsConsListItem(
+  value: unknown,
+): value is { id: string; title: string; description: string } {
+  if (!isRecord(value)) {
+    return false;
+  }
+  return (
+    isNonEmptyString(value.id) &&
+    isNonEmptyString(value.title) &&
+    isNonEmptyString(value.description)
+  );
+}
+
+function isComparisonBlock(value: unknown): boolean {
+  if (!isRecord(value)) {
+    return false;
+  }
+  if (
+    !isNonEmptyString(value.title) ||
+    !isNonEmptyString(value.reviewAttribution) ||
+    !isNonEmptyString(value.prosHeading) ||
+    !isNonEmptyString(value.consHeading)
+  ) {
+    return false;
+  }
+  if (!Array.isArray(value.pros) || !value.pros.every(isProsConsListItem)) {
+    return false;
+  }
+  if (!Array.isArray(value.cons) || !value.cons.every(isProsConsListItem)) {
+    return false;
+  }
+  return true;
+}
+
 function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageData {
   if (!isRecord(value)) {
     return false;
@@ -35,6 +73,10 @@ function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageDa
   }
 
   if (!isRecord(reviews) || typeof reviews.pageSize !== "number" || !Array.isArray(reviews.items)) {
+    return false;
+  }
+
+  if (!isComparisonBlock(value.comparison)) {
     return false;
   }
 
