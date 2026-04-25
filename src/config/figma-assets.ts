@@ -20,11 +20,4 @@ export const figmaAssets = {
   topBarDivider: "https://www.figma.com/api/mcp/asset/91809f38-2eb3-4a70-b447-65d37b5e4bae",
   newsletterBg: "https://www.figma.com/api/mcp/asset/88c04655-8d69-411e-b438-910cdc74df2a",
   footerLogo: "https://www.figma.com/api/mcp/asset/68f817f1-3cab-4f50-8b92-58a106c80319",
-  paymentVisa: "https://www.figma.com/api/mcp/asset/ae813ac6-2035-4cd1-9090-bb0eb142e5fa",
-  paymentAmex: "https://www.figma.com/api/mcp/asset/9e117b07-bdbb-448b-94c9-d5f6c6ff4b6e",
-  paymentApple: "https://www.figma.com/api/mcp/asset/b7ea23af-8d73-4f3d-9850-cb3d28e62ddd",
-  paymentPaypal: "https://www.figma.com/api/mcp/asset/0eee8853-5354-430a-97c5-ab42feb74abc",
-  paymentVenmo: "https://www.figma.com/api/mcp/asset/7bead68b-75c8-4391-b9b0-16e9cb4c9724",
-  paymentDiscover: "https://www.figma.com/api/mcp/asset/de35fc01-fb16-424f-9de2-9021de50ccf4",
-  paymentMastercard: "https://www.figma.com/api/mcp/asset/7709180a-dcba-4ce9-b040-79b0d605c12a",
 } as const;

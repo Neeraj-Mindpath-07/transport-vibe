@@ -1,6 +1,14 @@
 import { AtSign, Hash, Link2, Mail, MessageCircle, Phone, Send, Share2 } from "lucide-react";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import Link from "next/link";
+import amex from "@/assets/images/common/amex.svg";
+import applePay from "@/assets/images/common/apple-pay.svg";
+import discover from "@/assets/images/common/discover.svg";
+import mastercard from "@/assets/images/common/mastercard.svg";
+import paypal from "@/assets/images/common/paypal.svg";
+import venmo from "@/assets/images/common/venmo.svg";
+import visa from "@/assets/images/common/visa.svg";
 import { figmaAssets } from "@/config/figma-assets";
 import { layoutAssets } from "@/config/layout-assets";
 import { cn } from "@/lib/cn";
@@ -239,17 +247,26 @@ export function SiteFooter() {
           <div className="flex flex-wrap items-center gap-5">
             {(
               [
-                ["Visa", figmaAssets.paymentVisa, 55, 22],
-                ["American Express", figmaAssets.paymentAmex, 60, 38],
-                ["Apple Pay", figmaAssets.paymentApple, 60, 25],
-                ["PayPal", figmaAssets.paymentPaypal, 73, 19],
-                ["Venmo", figmaAssets.paymentVenmo, 60, 14],
-                ["Discover", figmaAssets.paymentDiscover, 60, 10],
-                ["Mastercard", figmaAssets.paymentMastercard, 60, 46],
-              ] as const
+                ["Visa", visa, 55, 22],
+                ["American Express", amex, 60, 38],
+                ["Apple Pay", applePay, 60, 25],
+                ["PayPal", paypal, 73, 19],
+                ["Venmo", venmo, 60, 14],
+                ["Discover", discover, 60, 10],
+                ["Mastercard", mastercard, 60, 46],
+              ] as const satisfies ReadonlyArray<
+                readonly [string, string | StaticImageData, number, number]
+              >
             ).map(([name, src, w, h]) => (
               <div key={name} className="relative opacity-90" style={{ width: w, height: h }}>
-                <Image src={src} alt={name} fill className="object-contain" sizes={`${w}px`} />
+                <Image
+                  src={src}
+                  alt={name}
+                  fill
+                  className="object-contain"
+                  sizes={`${w}px`}
+                  unoptimized={typeof src !== "string"}
+                />
               </div>
             ))}
           </div>

@@ -14,6 +14,9 @@ import { cn } from "@/lib/cn";
 const HERO_GRADIENT =
   "linear-gradient(82.84deg, #135128 19.12%, rgba(19, 81, 40, 0.7) 67.87%)";
 
+/** Same frosted band for top disclaimer and bottom stats (matches design). */
+const BANNER_GLASS_BAND = "bg-[#FFFFFF4D] backdrop-blur-[4px]";
+
 const HERO_FRAME_MIN_H = 385;
 const HERO_STATS_H = 88;
 const HERO_MAIN_MIN_H = HERO_FRAME_MIN_H - HERO_STATS_H;
@@ -162,8 +165,8 @@ export function BannerSection({ banner }: BannerSectionProps) {
   return (
     <section aria-labelledby="company-banner-title" className="w-full bg-neutral-100">
       {/* Disclosure — full-width band; copy aligned to site content width */}
-      <div className="w-full bg-[#FFFFFF4D] backdrop-blur-[4px]">
-        <p className="mx-auto max-w-[1366px] px-4 py-2.5 text-center text-body-xs leading-snug text-white lg:text-body-sm">
+      <div className={cn("w-full text-white", BANNER_GLASS_BAND)}>
+        <p className="mx-auto max-w-[1366px] px-4 py-2.5 text-center text-body-xs leading-snug lg:text-body-sm">
           <span className="opacity-95">{banner.disclaimer.text} </span>
           <Link
             href={banner.disclaimer.linkHref}
@@ -177,7 +180,7 @@ export function BannerSection({ banner }: BannerSectionProps) {
       {/* Hero: full-bleed background; inner row uses max-width container */}
       <div
         className={cn(
-          "flex w-full flex-col overflow-hidden rounded-b-xl hadow-sm",
+          "flex w-full flex-col overflow-hidden rounded-b-xl border border-[#FFFFFF0D] shadow-sm",
           "min-h-0 lg:min-h-[var(--hero-frame-min)]",
         )}
         style={{ ["--hero-frame-min" as string]: `${HERO_FRAME_MIN_H}px` }}
@@ -283,10 +286,11 @@ export function BannerSection({ banner }: BannerSectionProps) {
           </div>
         </div>
 
-        {/* Stats — full-width glass; grid aligned to content max width */}
+        {/* Stats — same glass band as disclaimer; grid aligned to content max width */}
         <div
           className={cn(
-            "w-full shrink-0 border-t border-[#FAFAFA3D] bg-[#0000001A] text-white backdrop-blur-[12px]",
+            "w-full shrink-0 border-t border-[#FAFAFA3D] text-white",
+            BANNER_GLASS_BAND,
             "min-h-[76px] lg:h-[var(--hero-stats-h)] lg:min-h-[var(--hero-stats-h)]",
           )}
           style={{ ["--hero-stats-h" as string]: `${HERO_STATS_H}px` }}

@@ -35,14 +35,13 @@ export default async function CompanyDetailsPage() {
         <div className="space-y-6">
           <CompanyScoreSection data={data.score} />
           <ComparisonSection data={data.comparison} />
-          <ImageGallery data={data.gallery} />
+          {/* <ImageGallery data={data.gallery} /> */}
           <CustomerReviewsAcrossPlatformsSection />
           <CompanyInformationSection data={data.companyInformation} />
           <ReviewsSection data={data.reviews} />
         </div>
       </CompanyDetailsLayout>
 
-      <PaymentStripSection data={data.paymentStrip} />
       <NewsletterSection data={data.newsletter} />
       <DisclaimerSection data={data.disclaimer} />
     </>
