@@ -9,6 +9,7 @@ function hasRequiredTopLevelKeys(value: Record<string, unknown>): boolean {
     "score",
     "companyInformation",
     "comparison",
+    "companyDeepDive",
     "gallery",
     "reviews",
     "paymentStrip",
@@ -56,6 +57,57 @@ function isComparisonBlock(value: unknown): boolean {
   return true;
 }
 
+function isCompanyDeepDiveCallout(value: unknown): value is { label: string; lines: string[] } {
+  if (!isRecord(value)) {
+    return false;
+  }
+  return isNonEmptyString(value.label) && isStringArray(value.lines) && value.lines.length > 0;
+}
+
+function isCompanyDeepDiveLabeledBlock(value: unknown): value is { label: string; text: string } {
+  if (!isRecord(value)) {
+    return false;
+  }
+  return isNonEmptyString(value.label) && isNonEmptyString(value.text);
+}
+
+function isCompanyDeepDiveSection(value: unknown): boolean {
+  if (!isRecord(value)) {
+    return false;
+  }
+  if (!isNonEmptyString(value.id) || !isNonEmptyString(value.heading)) {
+    return false;
+  }
+  if (!Array.isArray(value.paragraphs) || !value.paragraphs.every((p) => typeof p === "string")) {
+    return false;
+  }
+  if (value.callout !== undefined && !isCompanyDeepDiveCallout(value.callout)) {
+    return false;
+  }
+  if (value.labeledBlocks !== undefined) {
+    if (!Array.isArray(value.labeledBlocks) || !value.labeledBlocks.every(isCompanyDeepDiveLabeledBlock)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function isCompanyDeepDive(value: unknown): boolean {
+  if (!isRecord(value)) {
+    return false;
+  }
+  if (!isNonEmptyString(value.title) || !isNonEmptyString(value.attribution)) {
+    return false;
+  }
+  if (!isStringArray(value.badges)) {
+    return false;
+  }
+  if (!Array.isArray(value.sections) || !value.sections.every(isCompanyDeepDiveSection)) {
+    return false;
+  }
+  return true;
+}
+
 function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageData {
   if (!isRecord(value)) {
     return false;
@@ -77,6 +129,10 @@ function isCompanyDetailsPageData(value: unknown): value is CompanyDetailsPageDa
   }
 
   if (!isComparisonBlock(value.comparison)) {
+    return false;
+  }
+
+  if (!isCompanyDeepDive(value.companyDeepDive)) {
     return false;
   }
 
