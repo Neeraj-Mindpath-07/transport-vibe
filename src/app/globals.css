@@ -50,6 +50,11 @@
   --cd-watch-accent: #ed8936;
   --cd-watch-badge-bg: #feebc8;
 
+  /* Company Deep Dive — pricing callout (Figma) */
+  --cd-deepdive-callout-bg: #eff6ff;
+  --cd-deepdive-callout-border: #2563eb;
+  --cd-deepdive-callout-foreground: #1e3a5f;
+
   /* Semantic aliases for feature-level sections */
   --cd-surface-page: #f5f5f5;
   --cd-surface-card: #ffffff;
@@ -99,6 +104,10 @@
   --color-pros-badge: var(--cd-pros-badge-bg);
   --color-watch-accent: var(--cd-watch-accent);
   --color-watch-badge: var(--cd-watch-badge-bg);
+
+  --color-deepdive-callout: var(--cd-deepdive-callout-bg);
+  --color-deepdive-callout-border: var(--cd-deepdive-callout-border);
+  --color-deepdive-callout-foreground: var(--cd-deepdive-callout-foreground);
 
   --color-brand-deep: var(--cd-brand-deep);
   --color-surface: var(--cd-surface-card);

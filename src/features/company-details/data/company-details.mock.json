@@ -141,6 +141,76 @@
       }
     ]
   },
+  "companyDeepDive": {
+    "title": "Company Deep Dive",
+    "attribution": "Editorial analysis · Jan 2026",
+    "badges": [
+      "18 years operating",
+      "15,000+ carriers",
+      "All 48 states",
+      "Open & Enclosed"
+    ],
+    "sections": [
+      {
+        "id": "about",
+        "heading": "About Mercury Auto Transport",
+        "paragraphs": [
+          "Mercury Auto Transport is a licensed auto transport broker matching shippers with vetted carrier networks. The company positions itself on transparent pricing and a broad national footprint, with emphasis on major corridors and repeat-shipper relationships."
+        ]
+      },
+      {
+        "id": "how-it-works",
+        "heading": "How it works",
+        "paragraphs": [
+          "You book a window and provide vehicle details; Mercury sources capacity from its network and assigns a carrier. Pricing is typically locked or refined once a carrier is assigned, and contracts spell out insurance and pickup or delivery terms before dispatch."
+        ]
+      },
+      {
+        "id": "pricing",
+        "heading": "Pricing — what “93% accuracy” actually means",
+        "paragraphs": [
+          "The headline accuracy figure reflects how often final invoices stay within a narrow band of the initial quote. Market fuel changes, last-minute date shifts, and rural access can still move price—those events are the usual exceptions, not a hidden fee structure if disclosed up front in your quote pack."
+        ],
+        "callout": {
+          "label": "Pricing ranges:",
+          "lines": [
+            "Short-haul (under 500 mi): often mid–high three figures on open transport.",
+            "Cross-country: commonly low four figures open; enclosed adds a meaningful premium on most lanes.",
+            "Expedited and enclosed luxury moves: priced case-by-case with carrier-availability constraints."
+          ]
+        }
+      },
+      {
+        "id": "carrier-network",
+        "heading": "Carrier network",
+        "paragraphs": [
+          "Mercury is strongest where carrier density is high—e.g. state-to-state trunk routes and large metros. In rural pickup or drop-off scenarios, expect fewer carrier options, longer lead times, or higher all-in cost; condition scores in those lanes are still tracked but with less schedule slack."
+        ]
+      },
+      {
+        "id": "communication",
+        "heading": "Communication — the honest picture",
+        "paragraphs": [
+          "Most shipments receive timely booking and pickup confirmation. On long-haul transits, a minority of customers report lulls in proactive updates; getting direct contact from the driver at pickup mitigates that gap. Resolution timelines vary when things go off-script—set expectations from your BOL and carrier handoff."
+        ]
+      },
+      {
+        "id": "best-for",
+        "heading": "Who Mercury is best for — and when to look elsewhere",
+        "paragraphs": [],
+        "labeledBlocks": [
+          {
+            "label": "Best for:",
+            "text": "Planned moves on well-traveled lanes, customers who can book 7–14 days out, and shippers who value quote clarity and a single point of contact through dispatch."
+          },
+          {
+            "label": "Consider alternatives if:",
+            "text": "You need same-week rural pickup, guaranteed enclosed specialists for exotic vehicles, or a marketplace with live carrier bidding in real time—those profiles may get more flexibility from other models."
+          }
+        ]
+      }
+    ]
+  },
   "gallery": {
     "title": "Customer Reviews",
     "description": "Photo-backed deliveries and shipment snapshots from verified customers.",

@@ -50,6 +50,31 @@ export type ProsConsListItem = {
   description: string;
 };
 
+export type CompanyDeepDiveCallout = {
+  label: string;
+  lines: string[];
+};
+
+export type CompanyDeepDiveLabeledBlock = {
+  label: string;
+  text: string;
+};
+
+export type CompanyDeepDiveSection = {
+  id: string;
+  heading: string;
+  paragraphs: string[];
+  callout?: CompanyDeepDiveCallout;
+  labeledBlocks?: CompanyDeepDiveLabeledBlock[];
+};
+
+export type CompanyDeepDive = {
+  title: string;
+  attribution: string;
+  badges: string[];
+  sections: CompanyDeepDiveSection[];
+};
+
 export type GalleryImage = {
   id: string;
   src: string;
@@ -128,6 +153,7 @@ export type CompanyDetailsPageData = {
     pros: ProsConsListItem[];
     cons: ProsConsListItem[];
   };
+  companyDeepDive: CompanyDeepDive;
   gallery: {
     title: string;
     description: string;
