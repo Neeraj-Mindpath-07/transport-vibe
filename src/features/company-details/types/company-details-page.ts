@@ -1,17 +1,33 @@
-export type ScoreStrength = "strong" | "good" | "weaker";
+export type AiVerdictSegmentTone = "neutral" | "positive" | "caution";
+
+export type AiVerdictSegment = {
+  tone: AiVerdictSegmentTone;
+  text: string;
+};
+
+export type AiVerdict = {
+  title: string;
+  analysisLabel: string;
+  updatedLabel: string;
+  reviewCountLabel: string;
+  segments: AiVerdictSegment[];
+};
 
 export type CompanyStat = {
   label: string;
   value: string;
 };
 
+/** Pillar bar fill — matches Trust Score Breakdown spec colors. */
+export type TrustScoreBarTone = "green" | "blue" | "orange";
+
 export type TrustScorePillar = {
   id: string;
   title: string;
-  strength: ScoreStrength;
+  weightPercent: number;
+  reviewSampleLabel: string;
   score: number;
-  summary: string;
-  detail: string;
+  barTone: TrustScoreBarTone;
 };
 
 export type QuickFact = {
@@ -110,10 +126,14 @@ export type CompanyDetailsPageData = {
   };
   score: {
     title: string;
+    aiVerdict: AiVerdict;
     overall: number;
     maximum: number;
-    summary: string;
+    /** Optional section subtitle under the title. */
+    summary?: string;
     methodologyHref: string;
+    /** Label under the spectrum marker, e.g. "Highly Trusted". */
+    overallBandLabel: string;
     pillars: TrustScorePillar[];
   };
   companyInformation: {
