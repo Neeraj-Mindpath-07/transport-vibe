@@ -1,10 +1,10 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { figmaAssets } from "@/config/figma-assets";
+import { layoutAssets } from "@/config/layout-assets";
 import { useLockBodyScroll } from "@/hooks/use-lock-body-scroll";
 import { mainNavLinks } from "./nav-links";
 
@@ -16,12 +16,13 @@ export function MobileMainNav() {
     <div className="relative flex items-center justify-between gap-4">
       <Link href="/" className="relative block h-8 w-[120px] shrink-0 sm:w-[146px]">
         <Image
-          src={figmaAssets.navLogo}
+          src={layoutAssets.headerLogo}
           alt="Transportvibe"
           fill
           className="object-contain object-left"
           sizes="146px"
           priority
+          unoptimized
         />
       </Link>
       <button
@@ -32,7 +33,18 @@ export function MobileMainNav() {
         onClick={() => setOpen((o) => !o)}
       >
         <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        {open ? <X className="size-5" /> : <Menu className="size-5" />}
+        {open ? (
+          <X className="size-5" />
+        ) : (
+          <Image
+            src={layoutAssets.whisperMenu}
+            alt=""
+            width={15}
+            height={16}
+            className="size-4"
+            unoptimized
+          />
+        )}
       </button>
       {open ? (
         <div
@@ -58,6 +70,16 @@ export function MobileMainNav() {
                     onClick={() => setOpen(false)}
                   >
                     <span className="flex items-center gap-2">
+                      {item.label === "ShipAdvisor AI" ? (
+                        <Image
+                          src={layoutAssets.whisperMenu}
+                          alt=""
+                          width={15}
+                          height={16}
+                          className="size-4 shrink-0"
+                          unoptimized
+                        />
+                      ) : null}
                       {item.label}
                       {"badge" in item && item.badge ? (
                         <span className="rounded px-1 text-display-caption text-primary-500 bg-primary-500/20">
@@ -72,7 +94,7 @@ export function MobileMainNav() {
             <div className="mt-4 flex flex-col gap-2 border-t border-neutral-200 pt-4">
               <Link
                 href="#"
-                className="rounded-sm border border-primary-700 bg-neutral-0 py-2.5 text-center text-display-caption font-bold uppercase text-primary-700"
+                className="py-2.5 text-center text-display-caption font-bold uppercase text-[#1D7A3D] hover:underline"
                 onClick={() => setOpen(false)}
               >
                 Leave review

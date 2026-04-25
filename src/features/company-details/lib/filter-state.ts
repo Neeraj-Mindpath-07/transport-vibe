@@ -1,51 +1,81 @@
 import type { CompanyReview } from "../types/company-details-page";
 
-export type ReviewFilterState = {
-  search: string;
-  serviceTypes: string[];
-  states: string[];
-  ratings: number[];
+export type ReviewRatingTab = "all" | 1 | 2 | 3 | 4 | 5;
+
+export type ReviewSort =
+  | "newest"
+  | "oldest"
+  | "highestBudget"
+  | "lowestBudget"
+  | "highestRating"
+  | "lowestRating";
+
+export type CustomerFeedbackState = {
+  ratingTab: ReviewRatingTab;
+  sort: ReviewSort;
   page: number;
 };
 
-// v1: client-only state holder. Planned extension point for URL sync via nuqs.
-export const defaultReviewFilterState: ReviewFilterState = {
-  search: "",
-  serviceTypes: [],
-  states: [],
-  ratings: [],
+export const defaultCustomerFeedbackState: CustomerFeedbackState = {
+  ratingTab: "all",
+  sort: "newest",
   page: 1,
 };
 
-export function toggleMultiSelect(value: string, current: string[]): string[] {
-  return current.includes(value) ? current.filter((item) => item !== value) : [...current, value];
+function parseAmountPaid(value: string): number {
+  const normalized = value.replace(/[^0-9.]/g, "");
+  const parsed = Number.parseFloat(normalized);
+  return Number.isFinite(parsed) ? parsed : 0;
 }
 
-export function toggleRatings(value: number, current: number[]): number[] {
-  return current.includes(value) ? current.filter((item) => item !== value) : [...current, value];
-}
-
-export function applyReviewFilters(
+export function filterReviewsByRatingTab(
   reviews: CompanyReview[],
-  state: Omit<ReviewFilterState, "page">,
+  tab: ReviewRatingTab,
 ): CompanyReview[] {
-  const search = state.search.trim().toLowerCase();
+  if (tab === "all") {
+    return reviews;
+  }
+  return reviews.filter((review) => review.rating === tab);
+}
 
-  return reviews.filter((review) => {
-    const matchesSearch =
-      search.length === 0 ||
-      review.reviewer.toLowerCase().includes(search) ||
-      review.headline.toLowerCase().includes(search) ||
-      review.body.toLowerCase().includes(search) ||
-      review.vehicle.toLowerCase().includes(search);
+export function sortReviews(reviews: CompanyReview[], sort: ReviewSort): CompanyReview[] {
+  const sorted = [...reviews];
 
-    const matchesServiceType =
-      state.serviceTypes.length === 0 || state.serviceTypes.includes(review.serviceType);
-    const matchesState = state.states.length === 0 || state.states.includes(review.state);
-    const matchesRating = state.ratings.length === 0 || state.ratings.includes(review.rating);
+  const time = (review: CompanyReview) => new Date(review.postedAt).getTime();
+  const budget = (review: CompanyReview) => parseAmountPaid(review.amountPaid);
 
-    return matchesSearch && matchesServiceType && matchesState && matchesRating;
-  });
+  switch (sort) {
+    case "newest":
+      sorted.sort((a, b) => time(b) - time(a));
+      break;
+    case "oldest":
+      sorted.sort((a, b) => time(a) - time(b));
+      break;
+    case "highestBudget":
+      sorted.sort((a, b) => budget(b) - budget(a) || time(b) - time(a));
+      break;
+    case "lowestBudget":
+      sorted.sort((a, b) => budget(a) - budget(b) || time(b) - time(a));
+      break;
+    case "highestRating":
+      sorted.sort((a, b) => b.rating - a.rating || time(b) - time(a));
+      break;
+    case "lowestRating":
+      sorted.sort((a, b) => a.rating - b.rating || time(b) - time(a));
+      break;
+    default:
+      break;
+  }
+
+  return sorted;
+}
+
+export function buildCustomerFeedbackList(
+  items: CompanyReview[],
+  state: Omit<CustomerFeedbackState, "page">,
+): CompanyReview[] {
+  const filtered = filterReviewsByRatingTab(items, state.ratingTab);
+  return sortReviews(filtered, state.sort);
 }
 
 export function paginateReviews(
